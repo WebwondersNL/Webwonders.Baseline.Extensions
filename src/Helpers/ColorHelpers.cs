@@ -1,4 +1,4 @@
-﻿namespace Webwonders.Framework.Extensions.Helpers;
+﻿namespace Webwonders.Baseline.Extensions.Helpers;
 
 public interface IColor {}
 

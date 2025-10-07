@@ -1,4 +1,4 @@
-﻿namespace Webwonders.Framework.Extensions;
+﻿namespace Webwonders.Baseline.Extensions;
 
 public class HtmlTagReplacementOptions
 {

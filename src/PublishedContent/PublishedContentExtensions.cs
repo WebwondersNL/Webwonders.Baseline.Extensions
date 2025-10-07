@@ -4,7 +4,7 @@ using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Cms.Infrastructure.ModelsBuilder;
 using Umbraco.Extensions;
 
-namespace Webwonders.Framework.Extensions;
+namespace Webwonders.Baseline.Extensions;
 
 public class PublishedContentExtensions
 {

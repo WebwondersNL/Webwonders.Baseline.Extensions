@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using Umbraco.Extensions;
-using Webwonders.Framework.Extensions.Helpers;
-namespace Webwonders.Framework.Extensions.Theming;
+using Webwonders.Baseline.Extensions.Helpers;
+namespace Webwonders.Baseline.Extensions.Theming;
 
 public class ThemingExtensions
 {

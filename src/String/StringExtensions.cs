@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Options;
 using Umbraco.Cms.Core.Strings;
 
-namespace Webwonders.Framework.Extensions;
+namespace Webwonders.Baseline.Extensions;
 
 public class StringExtensions
 {
