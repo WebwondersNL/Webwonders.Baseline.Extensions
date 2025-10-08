@@ -6,7 +6,7 @@ namespace Webwonders.Baseline.Extensions;
 
 public static class StringExtensions
 {
-    public static IHtmlEncodedString StripParagraphs(IHtmlEncodedString htmlString)
+    public static IHtmlEncodedString StripParagraphs(this IHtmlEncodedString htmlString)
     {
         string newString = string.Empty;
 
@@ -23,7 +23,7 @@ public static class StringExtensions
         return new HtmlEncodedString(newString);
     }
 
-    public static IHtmlEncodedString StripTags(IHtmlEncodedString htmlString, (string[] tags, string replacement)[] replacements)
+    public static IHtmlEncodedString StripTags(this IHtmlEncodedString htmlString, (string[] tags, string replacement)[] replacements)
     {
         if (htmlString != null)
         {
