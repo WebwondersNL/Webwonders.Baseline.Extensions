@@ -4,17 +4,9 @@ using Umbraco.Cms.Core.Strings;
 
 namespace Webwonders.Baseline.Extensions;
 
-public class StringExtensions
+public static class StringExtensions
 {
-
-    private readonly Dictionary<string, string> _replacements;
-
-    public StringExtensions(IOptions<HtmlTagReplacementOptions> options)
-    {
-        _replacements = options.Value.Replacements;
-    }
-    
-    public virtual IHtmlEncodedString StripParagraphs(IHtmlEncodedString htmlString)
+    public static IHtmlEncodedString StripParagraphs(IHtmlEncodedString htmlString)
     {
         string newString = string.Empty;
 
@@ -31,7 +23,7 @@ public class StringExtensions
         return new HtmlEncodedString(newString);
     }
 
-    public virtual IHtmlEncodedString StripTags(IHtmlEncodedString htmlString)
+    public static IHtmlEncodedString StripTags(IHtmlEncodedString htmlString, (string[] tags, string replacement)[] replacements)
     {
         if (htmlString != null)
         {
@@ -45,9 +37,12 @@ public class StringExtensions
             return new HtmlEncodedString(string.Empty);
         }
 
-        foreach (var pair in _replacements)
+        foreach (var (tags, replacement) in replacements)
         {
-            input = input.Replace(pair.Key, pair.Value);
+            foreach (var tag in tags)
+            {
+                input = input.Replace(tag, replacement);
+            }
         }
 
         return new HtmlEncodedString(input);

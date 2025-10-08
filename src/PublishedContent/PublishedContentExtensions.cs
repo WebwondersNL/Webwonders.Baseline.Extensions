@@ -6,9 +6,9 @@ using Umbraco.Extensions;
 
 namespace Webwonders.Baseline.Extensions;
 
-public class PublishedContentExtensions
+public static class PublishedContentExtensions
 {
-    public virtual TResult? ValueWithFallback<TContent, TResult>(TContent input,
+    public static TResult? ValueWithFallback<TContent, TResult>(TContent input,
         IPublishedValueFallback publishedValueFallback, Expression<Func<TContent, TResult>> expr, Fallback fallback)
         where TContent : IPublishedElement
     {
